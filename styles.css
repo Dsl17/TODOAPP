@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 100vh;
+    font-family:Arial, Helvetica, sans-serif ;
+    background: linear-gradient(to right,blue,gray,grey);
+  }
+  h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 95vw;
+    max-width: 800px;
+    align-self: center;
+    flex-wrap: wrap;
+  }
+  form input,
+  form button {
+    height: 40px;
+  }
+  form input {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+  #AddTask {
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 2rem;
+  }
+
+  #functions {
+    align-self: center;
+  }
+
+  #functions input,
+  #functions select {
+    height: 40px;
+    text-align: center;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  select option:disabled {
+    font-weight: bolder;
+    color: white;
+    background: black;
+  }
+
+  #functions input {
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+  }
+  #functions input::placeholder {
+    color: black;
+  }
+  form input:focus,
+  #functions input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;   
+  }
+
+  #taskContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  }
+  .tasklist {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 3fr) 2fr;
+    padding: 1rem;
+  }
+  .tasklist * {
+    cursor: pointer;
+  }
+  .tasklist input,
+  .tasklist button {
+    height: 40px;
+    text-align: center;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  .tasklist button {
+    background: blue;
+    color: white;
+    border: none;
+  }
+  .completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+  }
+
+  .tasklist p {
+    margin: auto;
+  }
+  input[type="checkbox"] {
+    width: 15px;
+  }
+
+
+  @media screen and (max-width:700px) {
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+  }

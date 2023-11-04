@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Project</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>TODO APP</h1>
+    <form action="" id="tasks" autocomplete="off">
+      <input type="text" placeholder="Task Name" / id="task" required
+      autocomplete="off"> <input type="date" id="duedate" / autocomplete="off">
+      <input type="text" id="label" placeholder="Add a label" /
+      autocomplete="off">
+      <button type="submit" id="AddTask">Add Task</button>
+    </form>
+    <div id="functions">
+      <input type="text" id="filter" placeholder="Filter Condition" />
+      <select name="" id="completion">
+        <option value="Task Status" disabled selected>Task Status</option>
+        <option value="All" selected>All</option>
+        <option value="completed">Completed</option>
+        <option value="Notcompleted">Not Completed</option>
+      </select>
+    </div>
+
+    <div id="taskContainer"></div>
+
+    <script defer src="index.js"></script>
+  </body>
+</html>
+
